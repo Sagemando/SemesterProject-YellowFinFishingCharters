@@ -1,15 +1,90 @@
 body{
   font-family: Verdana, sans-serif;
   margin: 0;
-  background-color: #1F7A8C;
+
+  /* Background image settings */
+  background-image: url("../img/fishBackground.jpg"); /* replace with your image path */
+  background-repeat: repeat;    /* repeats horizontally and vertically */
+  background-position: top left; /* starts at top-left corner */
+  background-attachment: fixed;  /* optional: stays in place on scroll */
+  background-size: auto;
 }
 
 /* TWO COLUMN LAYOUT */
 main{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2em;
+  gap: 3em;
   padding: 2em;
+  align-items: start; /* prevents vertical stretching */
+}
+
+/* SITE HEADER */
+.siteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 2em;
+  background-color: #F2C94C; /* navy-ish background */
+  color: white;
+  flex-wrap: wrap; /* keeps it mobile-friendly */
+  gap: 1em;
+}
+
+/* Logo + Title */
+.logoTitle {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Site title styling */
+.siteHeader h1 {
+  font-size: 28px;
+  margin: 0;
+  white-space: nowrap; /* prevents line breaks */
+}
+
+/* Nav tabs styling */
+.navTabs {
+  display: flex;
+  gap: 0; /* no gap between buttons */
+}
+
+.navTabs button {
+  background-color: #B8C2CC;
+  border: none;
+  padding: 0.8em 1.2em;
+  font-size: 16px;
+  cursor: pointer;
+  color: #0E4D64;
+  font-weight: bold;
+  border-right: 1px solid white; /* optional separation line */
+  transition: background 0.2s;
+}
+
+.navTabs button:last-child {
+  border-right: none; /* remove border on last button */
+}
+
+.navTabs button:hover {
+  background-color: #1F7A8C;
+  color: white;
+}
+
+
+/* COLUMN STACKING */
+.leftColumn,
+.rightColumn{
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
+  align-items: center;
 }
 
 /* Sections keep your styling */
@@ -17,9 +92,20 @@ main{
 .section2{
   width: 80%;
   border: .1em solid black;
-  background-color: #E5E9EC;
+  background-color: #B8C2CC;
   padding: 1em;
   box-sizing: border-box;
+}
+
+/* Video centering */
+.howToVideo{
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.howToVideo iframe{
+  max-width: 100%;
 }
 
 /* Header style preserved */
@@ -27,22 +113,85 @@ main{
   text-align: center;
   font-family: Trebuchet MS, sans-serif;
   font-size: 36px;
+  margin: 0 0 0.4em 0;
 }
 
 .imageGrid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(4, 200px); /* 4 rows */
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  width: auto;
 }
 
-/* Make images fill their grid cells nicely */
 .imageGrid img{
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* crops instead of stretching */
+  aspect-ratio: 3 / 2 ; /* adjust shape here */
+  object-fit: cover;
   border-radius: 6px;
 }
+
+.lightbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img{
+  width: 50vw;
+  height: auto;
+  border-radius: 8px;
+}
+
+.lightbox:target{
+  display: flex;
+}
+
+/* SITE FOOTER */
+.siteFooter {
+  background-color: #102A43; /* Deep Current for consistency with header */
+  color: white;
+  padding: 1.5em 2em;
+  font-size: 14px;
+}
+
+.siteFooter a {
+  color: #F2C94C; /* Fin Yellow for links */
+  text-decoration: none;
+}
+
+.siteFooter a:hover {
+  text-decoration: underline;
+}
+
+/* Layout of footer content */
+.footerContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* center the content horizontally */
+  gap: 2em;
+  flex-wrap: wrap; /* mobile-friendly */
+  text-align: center; /* center text */
+}
+
+/* Logo styling */
+.footerLogoImg {
+  height: 100px;
+  width: auto;
+}
+
+/* Footer info */
+.footerInfo p {
+  margin: 0.2em 0;
+}
+
 
 /* Mobile friendly */
 @media (max-width: 900px){
@@ -54,6 +203,5 @@ main{
 @media (max-width: 768px){
   .imageGrid{
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
   }
 }
