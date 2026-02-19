@@ -1,22 +1,28 @@
-body{
+html,body{
+  height: 100%;
   font-family: Verdana, sans-serif;
   margin: 0;
-
-  /* Background image settings */
-  background-image: url("../img/fishBackground.jpg"); /* replace with your image path */
-  background-repeat: repeat;    /* repeats horizontally and vertically */
-  background-position: top left; /* starts at top-left corner */
-  background-attachment: fixed;  /* optional: stays in place on scroll */
+  background-image: url("../img/fishBackground.jpg");
+  background-repeat: repeat;
+  background-position: top left;
+  background-attachment: fixed;
   background-size: auto;
+}
+
+#wrapper {
+  min-height: 100%;       /* full viewport height */
+  display: flex;
+  flex-direction: column; /* stack main content and footer vertically */
 }
 
 /* TWO COLUMN LAYOUT */
 main{
+  flex: 1 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3em;
   padding: 2em;
-  align-items: start; /* prevents vertical stretching */
+  align-items: start;
 }
 
 /* SITE HEADER */
@@ -25,9 +31,9 @@ main{
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 2em;
-  background-color: #F2C94C; /* navy-ish background */
+  background-color: #F2C94C;
   color: white;
-  flex-wrap: wrap; /* keeps it mobile-friendly */
+  flex-wrap: wrap;
   gap: 1em;
 }
 
@@ -168,6 +174,7 @@ iframe{
   color: white;
   padding: 1.5em 2em;
   font-size: 14px;
+  flex-shrink: 0;
 }
 
 .siteFooter a {
