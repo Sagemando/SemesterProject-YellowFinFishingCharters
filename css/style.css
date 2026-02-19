@@ -77,6 +77,11 @@ main{
   color: white;
 }
 
+.navTabs button.active {
+  background-color: #F2C94C;  /* Fin Yellow for contrast */
+  color: #0E4D64;             /* Dark text */
+}
+
 
 /* COLUMN STACKING */
 .leftColumn,
