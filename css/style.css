@@ -153,6 +153,10 @@ main{
   display: flex;
 }
 
+iframe{
+  width: auto;
+  height: auto;
+}
 /* SITE FOOTER */
 .siteFooter {
   background-color: #102A43; /* Deep Current for consistency with header */
