@@ -4,23 +4,56 @@ body{
   background-color: #1F7A8C;
 }
 
-
-
-.section1{
-  float: left;
-  width: 45em;
-  margin: auto;
-  border: .1em solid black;
+/* TWO COLUMN LAYOUT */
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  padding: 2em;
 }
+
+/* Sections keep your styling */
+.section1,
 .section2{
-  float:right;
-  width: 45em;
-  margin: auto;
+  width: 80%;
   border: .1em solid black;
+  background-color: #E5E9EC;
+  padding: 1em;
+  box-sizing: border-box;
 }
 
+/* Header style preserved */
 .columnHeaders{
   text-align: center;
   font-family: Trebuchet MS, sans-serif;
-  font-size:36px;
+  font-size: 36px;
+}
+
+.imageGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(4, 200px); /* 4 rows */
+  gap: 10px;
+}
+
+/* Make images fill their grid cells nicely */
+.imageGrid img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crops instead of stretching */
+  border-radius: 6px;
+}
+
+/* Mobile friendly */
+@media (max-width: 900px){
+  main{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px){
+  .imageGrid{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
 }
