@@ -10,12 +10,12 @@ html,body{
 }
 
 #wrapper {
-  min-height: 100%;       /* full viewport height */
+  min-height: 100%;
   display: flex;
-  flex-direction: column; /* stack main content and footer vertically */
+  flex-direction: column;
 }
 
-/* TWO COLUMN LAYOUT */
+/* Two Column Layout */
 main{
   flex: 1 0 auto;
   display: grid;
@@ -25,7 +25,7 @@ main{
   align-items: start;
 }
 
-/* SITE HEADER */
+/* Site header */
 .siteHeader {
   display: flex;
   justify-content: space-between;
@@ -37,7 +37,7 @@ main{
   gap: 1em;
 }
 
-/* Logo + Title */
+/* Logo and Title */
 .logoTitle {
   display: flex;
   align-items: center;
@@ -53,13 +53,13 @@ main{
 .siteHeader h1 {
   font-size: 28px;
   margin: 0;
-  white-space: nowrap; /* prevents line breaks */
+  white-space: nowrap;
 }
 
 /* Nav tabs styling */
 .navTabs {
   display: flex;
-  gap: 0; /* no gap between buttons */
+  gap: 0;
 }
 
 .navTabs button {
@@ -70,12 +70,12 @@ main{
   cursor: pointer;
   color: #0E4D64;
   font-weight: bold;
-  border-right: 1px solid white; /* optional separation line */
+  border-right: 1px solid white;
   transition: background 0.2s;
 }
 
 .navTabs button:last-child {
-  border-right: none; /* remove border on last button */
+  border-right: none;
 }
 
 .navTabs button:hover {
@@ -84,8 +84,8 @@ main{
 }
 
 .navTabs button.active {
-  background-color: #F2C94C;  /* Fin Yellow for contrast */
-  color: #0E4D64;             /* Dark text */
+  background-color: #F2C94C;
+  color: #0E4D64;
 }
 
 
@@ -98,7 +98,7 @@ main{
   align-items: center;
 }
 
-/* Sections keep your styling */
+/* Sections styling */
 .section1,
 .section2{
   width: 80%;
@@ -119,7 +119,7 @@ main{
   max-width: 100%;
 }
 
-/* Header style preserved */
+/* Header style */
 .columnHeaders{
   text-align: center;
   font-family: Trebuchet MS, sans-serif;
@@ -136,7 +136,7 @@ main{
 
 .imageGrid img{
   width: 100%;
-  aspect-ratio: 3 / 2 ; /* adjust shape here */
+  aspect-ratio: 3 / 2 ;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -170,7 +170,7 @@ iframe{
 }
 /* SITE FOOTER */
 .siteFooter {
-  background-color: #102A43; /* Deep Current for consistency with header */
+  background-color: #102A43;
   color: white;
   padding: 1.5em 2em;
   font-size: 14px;
@@ -191,10 +191,10 @@ iframe{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; /* center the content horizontally */
+  justify-content: center;
   gap: 2em;
-  flex-wrap: wrap; /* mobile-friendly */
-  text-align: center; /* center text */
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 /* Logo styling */
