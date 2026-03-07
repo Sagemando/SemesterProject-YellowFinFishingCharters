@@ -441,6 +441,35 @@ main{
   }
 }
 
+/* ── Thank You Page ── */
+.thankYouCard {
+  background-color: #B8C2CC;
+  border: 0.1em solid black;
+  border-radius: 6px;
+  padding: 2.5em 3em;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.thankYouHeading {
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 36px;
+  color: #0E4D64;
+  margin: 0;
+}
+
+.thankYouText {
+  font-size: 15px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  margin: 0;
+}
+
 
 /* COLUMN STACKING */
 .leftColumn,
