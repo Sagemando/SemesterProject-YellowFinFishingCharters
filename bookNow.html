@@ -14,7 +14,6 @@
   <!-- HEADER -->
   <header class="siteHeader">
     <div class="logoTitle">
-      <!-- Logo clickable to go home -->
       <a href="index.html">
         <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="logo">
       </a>
@@ -26,7 +25,7 @@
       <button onclick="location.href='services.html'">Services</button>
       <button class="active" onclick="location.href='bookNow.html'">Book Now</button>
       <button onclick="location.href='gallery.html'">Gallery</button>
-      <button onclick="location.href='contact.html'">FAQ & Contact</button>
+      <button onclick="location.href='contact.html'">FAQ &amp; Contact</button>
       <button onclick="location.href='aboutUs.html'">About Us</button>
     </nav>
   </header>
@@ -34,35 +33,257 @@
   <!-- MAIN CONTENT -->
   <main>
 
+    <!-- FULL-WIDTH PAGE TITLE -->
+    <h1 class="bookNowTitle">Book With Us Now</h1>
+
     <!-- LEFT COLUMN -->
     <div class="leftColumn">
+
+      <!-- Inshore Bookings -->
       <section class="section1">
-        <h2 class="columnHeaders">Booking Overview</h2>
-        <p>Placeholder text for booking instructions, policies, or schedules. Replace with actual details later.</p>
+        <h2 class="columnHeaders">Inshore Bookings</h2>
+        <p class="sectionDesc">
+          Select your preferred month and click an available day to book
+          your inshore fishing spot.
+        </p>
+        <select class="monthSelect">
+          <option value="3" selected>March 2026</option>
+          <option value="4">April 2026</option>
+          <option value="5">May 2026</option>
+          <option value="6">June 2026</option>
+          <option value="7">July 2026</option>
+          <option value="8">August 2026</option>
+          <option value="9">September 2026</option>
+          <option value="10">October 2026</option>
+          <option value="11">November 2026</option>
+          <option value="12">December 2026</option>
+        </select>
+        <table class="bookingTable">
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+          <tr>
+            <td class="booked"><label class="dayLabel">1</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-2"><label class="dayLabel" for="in-2">2</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-3"><label class="dayLabel" for="in-3">3</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-4"><label class="dayLabel" for="in-4">4</label></td>
+            <td class="booked"><label class="dayLabel">5</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-6"><label class="dayLabel" for="in-6">6</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-7"><label class="dayLabel" for="in-7">7</label></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="dayCheck" id="in-8"><label class="dayLabel" for="in-8">8</label></td>
+            <td class="booked"><label class="dayLabel">9</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-10"><label class="dayLabel" for="in-10">10</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-11"><label class="dayLabel" for="in-11">11</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-12"><label class="dayLabel" for="in-12">12</label></td>
+            <td class="booked"><label class="dayLabel">13</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-14"><label class="dayLabel" for="in-14">14</label></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="dayCheck" id="in-15"><label class="dayLabel" for="in-15">15</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-16"><label class="dayLabel" for="in-16">16</label></td>
+            <td class="booked"><label class="dayLabel">17</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-18"><label class="dayLabel" for="in-18">18</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-19"><label class="dayLabel" for="in-19">19</label></td>
+            <td><input type="checkbox" class="dayCheck" id="in-20"><label class="dayLabel" for="in-20">20</label></td>
+            <td class="booked"><label class="dayLabel">21</label></td>
+          </tr>
+        </table>
+        <a href="bookingForm.html" class="bookSubmitBtn">Book Inshore Spot</a>
       </section>
 
+      <!-- Offshore Bookings -->
       <section class="section1">
-        <h2 class="columnHeaders">Choose Your Charter</h2>
-        <p>Details about inshore/offshore charters and selection options go here.</p>
+        <h2 class="columnHeaders">Offshore Bookings</h2>
+        <p class="sectionDesc">
+          Select your preferred month and click an available day to book
+          your offshore fishing spot.
+        </p>
+        <select class="monthSelect">
+          <option value="3" selected>March 2026</option>
+          <option value="4">April 2026</option>
+          <option value="5">May 2026</option>
+          <option value="6">June 2026</option>
+          <option value="7">July 2026</option>
+          <option value="8">August 2026</option>
+          <option value="9">September 2026</option>
+          <option value="10">October 2026</option>
+          <option value="11">November 2026</option>
+          <option value="12">December 2026</option>
+        </select>
+        <table class="bookingTable">
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="dayCheck" id="off-1"><label class="dayLabel" for="off-1">1</label></td>
+            <td class="booked"><label class="dayLabel">2</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-3"><label class="dayLabel" for="off-3">3</label></td>
+            <td class="booked"><label class="dayLabel">4</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-5"><label class="dayLabel" for="off-5">5</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-6"><label class="dayLabel" for="off-6">6</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-7"><label class="dayLabel" for="off-7">7</label></td>
+          </tr>
+          <tr>
+            <td class="booked"><label class="dayLabel">8</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-9"><label class="dayLabel" for="off-9">9</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-10"><label class="dayLabel" for="off-10">10</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-11"><label class="dayLabel" for="off-11">11</label></td>
+            <td class="booked"><label class="dayLabel">12</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-13"><label class="dayLabel" for="off-13">13</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-14"><label class="dayLabel" for="off-14">14</label></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="dayCheck" id="off-15"><label class="dayLabel" for="off-15">15</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-16"><label class="dayLabel" for="off-16">16</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-17"><label class="dayLabel" for="off-17">17</label></td>
+            <td class="booked"><label class="dayLabel">18</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-19"><label class="dayLabel" for="off-19">19</label></td>
+            <td class="booked"><label class="dayLabel">20</label></td>
+            <td><input type="checkbox" class="dayCheck" id="off-21"><label class="dayLabel" for="off-21">21</label></td>
+          </tr>
+        </table>
+        <a href="bookingForm.html" class="bookSubmitBtn">Book Offshore Spot</a>
       </section>
 
-      <section class="section1">
-        <h2 class="columnHeaders">Equipment Options</h2>
-        <p>Information about renting rods, reels, tackle, kayaks, or other gear.</p>
-      </section>
     </div>
 
     <!-- RIGHT COLUMN -->
     <div class="rightColumn">
+
+      <!-- Fishing Gear Bookings -->
       <section class="section2">
-        <h2 class="columnHeaders">Special Offers & Packages</h2>
-        <p>Placeholder for any seasonal promotions or group booking options.</p>
+        <h2 class="columnHeaders">Fishing Gear Bookings</h2>
+        <div class="sectionInner">
+
+          <!-- Gear checklist -->
+          <div>
+            <p class="sectionDesc">Select the gear you'd like to rent:</p>
+            <ul class="checkList">
+              <li><input type="checkbox" id="poles"><label for="poles">Fishing Poles</label></li>
+              <li><input type="checkbox" id="reels"><label for="reels">Reels</label></li>
+              <li><input type="checkbox" id="waders"><label for="waders">Waders</label></li>
+              <li><input type="checkbox" id="tackle"><label for="tackle">Tackle Box &amp; Bait</label></li>
+              <li><input type="checkbox" id="nets"><label for="nets">Nets</label></li>
+              <li><input type="checkbox" id="cooler"><label for="cooler">Cooler</label></li>
+            </ul>
+          </div>
+
+          <!-- Gear schedule calendar -->
+          <div>
+            <p class="sectionDesc">Select month and available pickup date:</p>
+            <select class="monthSelect">
+              <option value="3" selected>March 2026</option>
+              <option value="4">April 2026</option>
+              <option value="5">May 2026</option>
+              <option value="6">June 2026</option>
+              <option value="7">July 2026</option>
+              <option value="8">August 2026</option>
+              <option value="9">September 2026</option>
+              <option value="10">October 2026</option>
+              <option value="11">November 2026</option>
+              <option value="12">December 2026</option>
+            </select>
+            <table class="bookingTable">
+              <tr>
+                <th>Mon</th>
+                <th>Wed</th>
+                <th>Fri</th>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="dayCheck" id="gear-3"><label class="dayLabel" for="gear-3">3</label></td>
+                <td class="booked"><label class="dayLabel">5</label></td>
+                <td><input type="checkbox" class="dayCheck" id="gear-7"><label class="dayLabel" for="gear-7">7</label></td>
+              </tr>
+              <tr>
+                <td class="booked"><label class="dayLabel">10</label></td>
+                <td><input type="checkbox" class="dayCheck" id="gear-12"><label class="dayLabel" for="gear-12">12</label></td>
+                <td><input type="checkbox" class="dayCheck" id="gear-14"><label class="dayLabel" for="gear-14">14</label></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="dayCheck" id="gear-17"><label class="dayLabel" for="gear-17">17</label></td>
+                <td class="booked"><label class="dayLabel">19</label></td>
+                <td><input type="checkbox" class="dayCheck" id="gear-21"><label class="dayLabel" for="gear-21">21</label></td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+        <a href="bookingForm.html" class="bookSubmitBtn">Reserve Gear</a>
       </section>
 
+      <!-- Kayak Rentals Bookings -->
       <section class="section2">
-        <h2 class="columnHeaders">Contact & Assistance</h2>
-        <p>Instructions for contacting staff for help with bookings.</p>
+        <h2 class="columnHeaders">Kayak Rentals</h2>
+        <div class="sectionInner">
+
+          <!-- Kayak checklist -->
+          <div>
+            <p class="sectionDesc">Select the kayak type you'd like to rent:</p>
+            <ul class="checkList">
+              <li><input type="checkbox" id="tandem"><label for="tandem">Tandem Kayak</label></li>
+              <li><input type="checkbox" id="single"><label for="single">Single Kayak</label></li>
+              <li><input type="checkbox" id="motor"><label for="motor">Motor-Assisted</label></li>
+              <li><input type="checkbox" id="pedal"><label for="pedal">Pedal-Driven</label></li>
+            </ul>
+          </div>
+
+          <!-- Kayak schedule calendar -->
+          <div>
+            <p class="sectionDesc">Select month and available rental date:</p>
+            <select class="monthSelect">
+              <option value="3" selected>March 2026</option>
+              <option value="4">April 2026</option>
+              <option value="5">May 2026</option>
+              <option value="6">June 2026</option>
+              <option value="7">July 2026</option>
+              <option value="8">August 2026</option>
+              <option value="9">September 2026</option>
+              <option value="10">October 2026</option>
+              <option value="11">November 2026</option>
+              <option value="12">December 2026</option>
+            </select>
+            <table class="bookingTable">
+              <tr>
+                <th>Mon</th>
+                <th>Wed</th>
+                <th>Fri</th>
+              </tr>
+              <tr>
+                <td class="booked"><label class="dayLabel">3</label></td>
+                <td><input type="checkbox" class="dayCheck" id="kay-5"><label class="dayLabel" for="kay-5">5</label></td>
+                <td><input type="checkbox" class="dayCheck" id="kay-7"><label class="dayLabel" for="kay-7">7</label></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="dayCheck" id="kay-10"><label class="dayLabel" for="kay-10">10</label></td>
+                <td class="booked"><label class="dayLabel">12</label></td>
+                <td><input type="checkbox" class="dayCheck" id="kay-14"><label class="dayLabel" for="kay-14">14</label></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="dayCheck" id="kay-17"><label class="dayLabel" for="kay-17">17</label></td>
+                <td><input type="checkbox" class="dayCheck" id="kay-19"><label class="dayLabel" for="kay-19">19</label></td>
+                <td class="booked"><label class="dayLabel">21</label></td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+        <a href="bookingForm.html" class="bookSubmitBtn">Reserve Kayak</a>
       </section>
+
     </div>
 
   </main>
@@ -89,5 +310,4 @@
 
 </div>
 </body>
-
 </html>

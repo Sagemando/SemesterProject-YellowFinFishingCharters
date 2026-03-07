@@ -88,6 +88,359 @@ main{
   color: #0E4D64;
 }
 
+/* ── Services Page ── */
+.servicesTitle {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 36px;
+  margin: 0 auto 0.5em auto;
+  color: #0E4D64;
+  background-color: #B8C2CC;
+  border: 0.1em solid black;
+  padding: 0.5em 2em;
+  box-sizing: border-box;
+  width: fit-content;
+}
+
+.servicesTitle span {
+  display: block;
+  font-size: 16px;
+  font-style: italic;
+  color: #333;
+  margin-top: 0.2em;
+}
+
+.section1 ul,
+.section2 ul {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+.section1 ul li,
+.section2 ul li {
+  margin-bottom: 0.4em;
+}
+
+.bookLink {
+  display: inline-block;
+  margin-top: 0.8em;
+  padding: 0.4em 1em;
+  background-color: #F2C94C;
+  color: #0E4D64;
+  font-weight: bold;
+  text-decoration: none;
+  border: 0.1em solid #0E4D64;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.bookLink:hover {
+  background-color: #1F7A8C;
+  color: white;
+  border-color: #1F7A8C;
+}
+
+/* ── Book Now Page ── */
+.bookNowTitle {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 36px;
+  margin: 0 auto 0.5em auto;
+  color: #0E4D64;
+  background-color: #B8C2CC;
+  border: 0.1em solid black;
+  padding: 0.5em 2em;
+  box-sizing: border-box;
+  width: fit-content;
+}
+
+/* Inner two-column layout inside gear/kayak sections */
+.sectionInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-top: 0.8em;
+}
+
+/* Booking calendar table */
+.bookingTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 0.5em;
+}
+
+.bookingTable th {
+  background-color: #0E4D64;
+  color: white;
+  padding: 0.4em;
+  text-align: center;
+}
+
+.bookingTable td {
+  border: 0.1em solid #0E4D64;
+  padding: 0.4em;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.bookingTable td:hover {
+  background-color: #F2C94C;
+  color: #0E4D64;
+  font-weight: bold;
+}
+
+.bookingTable td.booked {
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* Checkbox list for gear/kayak */
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0;
+}
+
+.checkList li {
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 14px;
+}
+
+.checkList input[type="checkbox"] {
+  accent-color: #0E4D64;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Submit booking button */
+.bookSubmitBtn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1.5em;
+  background-color: #0E4D64;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.bookSubmitBtn:hover {
+  background-color: #F2C94C;
+  color: #0E4D64;
+}
+
+/* Section description text */
+.sectionDesc {
+  font-size: 14px;
+  margin: 0.4em 0 0 0;
+  color: #1a1a1a;
+}
+
+/* Month selector dropdown */
+.monthSelect {
+  display: block;
+  margin: 0.8em 0 0.5em 0;
+  padding: 0.4em 0.8em;
+  font-size: 14px;
+  font-family: Verdana, sans-serif;
+  background-color: #0E4D64;
+  color: white;
+  border: 0.1em solid #0E4D64;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.monthSelect:focus {
+  outline: 2px solid #F2C94C;
+}
+
+.monthSelect option {
+  background-color: white;
+  color: #0E4D64;
+}
+
+/* ── Booking Form Page ── */
+
+/* Override main grid to single column for form page */
+.formMain {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2em;
+}
+
+/* Form container */
+.formContainer {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+/* The form itself */
+.bookingForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+/* Fieldset groupings */
+.formFieldset {
+  border: 0.1em solid #0E4D64;
+  border-radius: 6px;
+  padding: 1.2em 1.5em;
+  background-color: #B8C2CC;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Fieldset legend */
+.formLegend {
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0E4D64;
+  padding: 0 0.5em;
+}
+
+/* Row of form groups */
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.formRow:last-child {
+  margin-bottom: 0;
+}
+
+/* Individual form group */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+/* Full width group inside a row */
+.formGroup.fullWidth {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+.formGroup label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0E4D64;
+}
+
+/* Text inputs, selects, textareas */
+.formGroup input[type="text"],
+.formGroup input[type="tel"],
+.formGroup input[type="email"],
+.formGroup input[type="date"],
+.formGroup select,
+.formGroup textarea {
+  padding: 0.5em 0.8em;
+  font-size: 14px;
+  font-family: Verdana, sans-serif;
+  border: 0.1em solid #0E4D64;
+  border-radius: 4px;
+  background-color: white;
+  color: #1a1a1a;
+  box-sizing: border-box;
+  width: 100%;
+  transition: outline 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: 2px solid #F2C94C;
+  border-color: #F2C94C;
+}
+
+/* Textarea resize */
+.formGroup textarea {
+  resize: vertical;
+}
+
+/* Checkbox rows inside form */
+.checkListForm {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  font-size: 14px;
+}
+
+.checkListForm input[type="checkbox"] {
+  accent-color: #0E4D64;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.15em;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.checkListForm label {
+  font-weight: normal !important;
+  color: #1a1a1a !important;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+/* Required asterisk */
+.required {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* Required field note */
+.requiredNote {
+  font-size: 13px;
+  color: #333;
+  margin: 0;
+}
+
+/* Submit button row */
+.formSubmitRow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+/* Wider submit button for form */
+.formSubmitBtn {
+  padding: 0.7em 3em;
+  font-size: 16px;
+}
+
+/* Form mobile responsive */
+@media (max-width: 600px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* COLUMN STACKING */
 .leftColumn,

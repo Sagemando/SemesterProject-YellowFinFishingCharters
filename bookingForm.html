@@ -1,0 +1,251 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YellowFinFishingCharters - Booking Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="wrapper">
+
+  <!-- HEADER -->
+  <header class="siteHeader">
+    <div class="logoTitle">
+      <a href="index.html">
+        <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="logo">
+      </a>
+      <h1>Yellow-Fin Fishing Charter</h1>
+    </div>
+
+    <nav class="navTabs">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='services.html'">Services</button>
+      <button class="active" onclick="location.href='bookNow.html'">Book Now</button>
+      <button onclick="location.href='gallery.html'">Gallery</button>
+      <button onclick="location.href='contact.html'">FAQ &amp; Contact</button>
+      <button onclick="location.href='aboutUs.html'">About Us</button>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="formMain">
+
+    <div class="formContainer">
+
+      <h1 class="bookNowTitle">Booking Form</h1>
+
+      <form class="bookingForm" action="#" method="post">
+
+        <!-- PERSONAL INFORMATION -->
+        <fieldset class="formFieldset">
+          <legend class="formLegend">Personal Information</legend>
+
+          <div class="formRow">
+            <div class="formGroup">
+              <label for="firstName">First Name <span class="required">*</span></label>
+              <input type="text" id="firstName" name="firstName"
+                     placeholder="Enter your first name" required>
+            </div>
+            <div class="formGroup">
+              <label for="lastName">Last Name <span class="required">*</span></label>
+              <input type="text" id="lastName" name="lastName"
+                     placeholder="Enter your last name" required>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <div class="formGroup">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone"
+                     placeholder="(555) 123-4567" required>
+            </div>
+            <div class="formGroup">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email"
+                     placeholder="example@email.com" required>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <div class="formGroup">
+              <label for="dob">Date of Birth <span class="required">*</span></label>
+              <input type="date" id="dob" name="dob" required>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <!-- EMERGENCY CONTACT -->
+        <fieldset class="formFieldset">
+          <legend class="formLegend">Emergency Contact</legend>
+
+          <div class="formRow">
+            <div class="formGroup">
+              <label for="emergencyName">Emergency Contact Name <span class="required">*</span></label>
+              <input type="text" id="emergencyName" name="emergencyName"
+                     placeholder="Full name" required>
+            </div>
+            <div class="formGroup">
+              <label for="emergencyPhone">Emergency Contact Phone <span class="required">*</span></label>
+              <input type="tel" id="emergencyPhone" name="emergencyPhone"
+                     placeholder="(555) 123-4567" required>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <!-- BOOKING DETAILS -->
+        <fieldset class="formFieldset">
+          <legend class="formLegend">Booking Details</legend>
+
+          <div class="formRow">
+            <div class="formGroup">
+              <label for="tripType">Type of Trip <span class="required">*</span></label>
+              <select id="tripType" name="tripType" required>
+                <option value="" disabled selected>Select a trip type</option>
+                <option value="inshore">Inshore Fishing</option>
+                <option value="offshore">Offshore Fishing</option>
+                <option value="kayak">Kayak Rental</option>
+              </select>
+            </div>
+            <div class="formGroup">
+              <label for="departureTime">Preferred Departure Time <span class="required">*</span></label>
+              <select id="departureTime" name="departureTime" required>
+                <option value="" disabled selected>Select a time</option>
+                <option value="morning">Morning (6:00 AM - 10:00 AM)</option>
+                <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <div class="formGroup">
+              <label for="partySize">Party Size <span class="required">*</span></label>
+              <select id="partySize" name="partySize" required>
+                <option value="" disabled selected>Select party size</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6">6+ People (contact us)</option>
+              </select>
+            </div>
+            <div class="formGroup">
+              <label for="gearRental">Require Fishing Gear Rental?</label>
+              <select id="gearRental" name="gearRental">
+                <option value="" disabled selected>Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <!-- EXPERIENCE & SAFETY -->
+        <fieldset class="formFieldset">
+          <legend class="formLegend">Experience &amp; Safety</legend>
+
+          <div class="formRow">
+            <div class="formGroup">
+              <label for="experienceLevel">Fishing Experience Level <span class="required">*</span></label>
+              <select id="experienceLevel" name="experienceLevel" required>
+                <option value="" disabled selected>Select experience level</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="expert">Expert</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <div class="formGroup fullWidth">
+              <label for="medicalNotes">Medical Conditions or Physical Limitations</label>
+              <textarea id="medicalNotes" name="medicalNotes" rows="3"
+                        placeholder="Please describe any medical conditions or physical limitations the captain should be aware of. Leave blank if none.">
+              </textarea>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <div class="formGroup fullWidth">
+              <label for="specialRequests">Special Requests or Notes</label>
+              <textarea id="specialRequests" name="specialRequests" rows="3"
+                        placeholder="Any additional requests or information you'd like us to know.">
+              </textarea>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <!-- LEGAL & AGREEMENT -->
+        <fieldset class="formFieldset">
+          <legend class="formLegend">Legal &amp; Agreement</legend>
+
+          <div class="formRow">
+            <div class="formGroup fullWidth">
+              <div class="checkListForm">
+                <input type="checkbox" id="ageConfirm" name="ageConfirm" required>
+                <label for="ageConfirm">
+                  I confirm that I am 18 years of age or older, or I have obtained
+                  guardian consent. <span class="required">*</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <div class="formGroup fullWidth">
+              <div class="checkListForm">
+                <input type="checkbox" id="termsConfirm" name="termsConfirm" required>
+                <label for="termsConfirm">
+                  I agree to the Yellow-Fin Fishing Charter terms &amp; conditions
+                  and liability waiver. <span class="required">*</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <!-- REQUIRED NOTE -->
+        <p class="requiredNote"><span class="required">*</span> Indicates a required field.</p>
+
+        <!-- SUBMIT -->
+        <div class="formSubmitRow">
+          <button type="submit" class="bookSubmitBtn formSubmitBtn">Confirm Booking</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="siteFooter">
+    <div class="footerContent">
+      <div class="footerLogo">
+        <a href="index.html">
+          <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="footerLogoImg">
+        </a>
+      </div>
+      <div class="footerInfo">
+        <p>&copy; 2026 Yellow-Fin Fishing Charter. All rights reserved.</p>
+        <p>Email: info@yellowfinfishing.com | Phone: (555) 123-4567</p>
+        <p>
+          <a href="index.html">Home</a> |
+          <a href="bookNow.html">Book Now</a> |
+          <a href="contact.html">Contact</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
