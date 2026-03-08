@@ -8,16 +8,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<div id="lightbox">
-  <span id="lightboxClose">&times;</span>
-  <img id="lightboxImg" src="" alt="">
-</div>
-
 <body>
 <div id="wrapper">
+
+  <!-- HEADER -->
   <header class="siteHeader">
     <div class="logoTitle">
-      <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="logo">
+      <a href="index.html">
+        <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="logo">
+      </a>
       <h1>Yellow-Fin Fishing Charter</h1>
     </div>
 
@@ -26,83 +25,128 @@
       <button onclick="location.href='services.html'">Services</button>
       <button onclick="location.href='bookNow.html'">Book Now</button>
       <button onclick="location.href='gallery.html'">Gallery</button>
-      <button onclick="location.href='contact.html'">FAQ & Contact</button>
+      <button onclick="location.href='contact.html'">FAQ &amp; Contact</button>
       <button onclick="location.href='aboutUs.html'">About Us</button>
     </nav>
   </header>
+
+  <!-- MAIN CONTENT -->
   <main>
 
     <!-- LEFT COLUMN -->
     <div class="leftColumn">
 
+      <!-- Who We Are -->
       <section class="section1">
         <h2 class="columnHeaders">Who We Are</h2>
-        <p>
-          We are your local, St.Pete based, fishing charter company Yellow-Fin Fishing! Our company was born in 2024
-          from a family with deep ties to the sport of fishing. Our family has been fishing Tampa Bay waters for sport
-          and recreation spanning decades, we finally have the opportunity to deliver our knowledge and passion of
-          fishing to you! We offer full inshore & offshore chartering services. We understand that the hobby of fishing
-          can be expensive, so we also offer rental fishing gear and kayak rentals for all anglers.
+        <p class="sectionDesc">
+          We are your local, St. Pete based, fishing charter company
+          Yellow-Fin Fishing! Our company was born in 2024 from a family
+          with deep ties to the sport of fishing. Our family has been
+          fishing Tampa Bay waters for sport and recreation spanning
+          decades, we finally have the opportunity to deliver our knowledge
+          and passion of fishing to you! We offer full inshore &amp;
+          offshore chartering services. We understand that the hobby of
+          fishing can be expensive, so we also offer rental fishing gear
+          and kayak rentals for all anglers.
         </p>
       </section>
 
+      <!-- What We Offer -->
       <section class="section1">
         <h2 class="columnHeaders">What We Offer</h2>
-        <p>
-          We offer a variety of products and services to best suit the needs of all angler! Our main focus is our
-          inshore
-          and offshore chartering services. Here we can provide you with the best fishing experience without stress of
-          locating the fish. We provide a range of fishing gear for purchase or rental, this includes rods & reel
-          combos,
-          pre-packaged tackled boxes with in season lures, and more! We're also excited to announce our newly rentable
-          kayaks! We are offering solo, tandem, paddle and pedal powered with plans to expand more in the future!
+        <p class="sectionDesc">
+          We offer a variety of products and services to best suit the
+          needs of all anglers! Our main focus is our inshore and offshore
+          chartering services. Here we can provide you with the best
+          fishing experience without the stress of locating the fish. We
+          provide a range of fishing gear for purchase or rental, this
+          includes rods &amp; reel combos, pre-packaged tackle boxes with
+          in season lures, and more! We're also excited to announce our
+          newly rentable kayaks! We are offering solo, tandem, paddle and
+          pedal powered with plans to expand more in the future!
         </p>
+        <a href="services.html" class="bookLink">View All Services</a>
       </section>
 
+      <!-- How To Videos -->
       <section class="section1">
-        <h2 class="columnHeaders">Check out our videos!</h2>
-        <iframe
-          src="https://www.youtube.com/embed/pUN2pwJZj0E"
-          title="How To Rig Your Shrimp"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
-        <iframe
-          src="https://www.youtube.com/embed/-fWe4YJjTgw?si=E4PLPjqOP0LDvO8B"
-          title="5 Reasons This Tides System Helps You Catch More Fish"
-          frameborder="0"
-          allowfullscreen></iframe>
+        <h2 class="columnHeaders">How To Videos</h2>
+        <p class="sectionDesc">
+          Check out our featured fishing tutorials — tips and tricks
+          to help you make the most of your time on the water!
+        </p>
+
+        <div class="videoGrid">
+
+          <!-- Video 1 -->
+          <div class="videoItem">
+            <p class="videoTitle">How To Rig Your Shrimp</p>
+            <div class="videoWrapper">
+              <iframe
+                src="https://www.youtube.com/embed/pUN2pwJZj0E"
+                title="How To Rig Your Shrimp"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="videoItem">
+            <p class="videoTitle">5 Reasons This Tides System Helps You Catch More Fish</p>
+            <div class="videoWrapper">
+              <iframe
+                src="https://www.youtube.com/embed/-fWe4YJjTgw"
+                title="5 Reasons This Tides System Helps You Catch More Fish"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+
+        <a href="gallery.html" class="bookLink">View All Videos</a>
       </section>
 
     </div>
 
-
     <!-- RIGHT COLUMN -->
     <div class="rightColumn">
 
+      <!-- Mission Statement -->
       <section class="section2">
         <h2 class="columnHeaders">Mission Statement</h2>
-        <p>
-          We believe in the enjoyment of fishing must be accompanied by the preservation of the land and animals we
-          hunt.
-          As anglers it is our responsibility to preserve the beautiful creatures we pull from the lake or sea, and the
-          habitat they preside in. Our company prides itself on providing the best experience for our clients while also
-          standing behind the animals and environment any way we can.
+        <p class="sectionDesc">
+          We believe the enjoyment of fishing must be accompanied by the
+          preservation of the land and animals we hunt. As anglers it is
+          our responsibility to preserve the beautiful creatures we pull
+          from the lake or sea, and the habitat they reside in. Our
+          company prides itself on providing the best experience for our
+          clients while also standing behind the animals and environment
+          any way we can.
         </p>
       </section>
 
+      <!-- Gallery -->
       <section class="section2">
         <h2 class="columnHeaders">Gallery</h2>
+        <p class="sectionDesc">
+          A glimpse at some of our favorite catches and memories out
+          on the water. Visit our full gallery for more!
+        </p>
 
         <div class="imageGrid">
           <a href="#img1"><img src="img/womanfightingFish.jpg" alt="Woman reeling in fish with fishing pole"></a>
-          <a href="#img2"> <img src="img/offshoreTunaCatches.jpg" alt="Group of friends showing fish to camera"></a>
-          <a href="#img3"> <img src="img/Capt.JimmySnook.jpg" alt="Captain Jimmy with slot Snook"></a>
-          <a href="#img4"> <img src="img/inshore-tarpon.jpg" alt="Clients with Tarpon"></a>
-          <a href="#img5"> <img src="img/yellowFinTunaCatch.jpg" alt="Client with YellowFin Tuna"> </a>
-          <a href="#img6"> <img src="img/yellowFinCatch2.jpg" alt="Woman client with yellow fin" height="280"> </a>
-
+          <a href="#img2"><img src="img/offshoreTunaCatches.jpg" alt="Group of friends showing fish to camera"></a>
+          <a href="#img3"><img src="img/Capt.JimmySnook.jpg" alt="Captain Jimmy with slot Snook"></a>
+          <a href="#img4"><img src="img/inshore-tarpon.jpg" alt="Clients with Tarpon"></a>
+          <a href="#img5"><img src="img/yellowFinTunaCatch.jpg" alt="Client with YellowFin Tuna"></a>
+          <a href="#img6"><img src="img/yellowFinCatch2.jpg" alt="Woman client with yellow fin"></a>
         </div>
+
+        <a href="gallery.html" class="bookLink">View Full Gallery</a>
       </section>
 
     </div>
@@ -113,13 +157,15 @@
   <footer class="siteFooter">
     <div class="footerContent">
       <div class="footerLogo">
-        <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="footerLogoImg">
+        <a href="index.html">
+          <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="footerLogoImg">
+        </a>
       </div>
       <div class="footerInfo">
-        <p>&copy; 2024 Yellow-Fin Fishing Charter. All rights reserved.</p>
+        <p>&copy; 2026 Yellow-Fin Fishing Charter. All rights reserved.</p>
         <p>Email: info@yellowfinfishing.com | Phone: (555) 123-4567</p>
         <p>
-          <a href="services.html">Services</a> |
+          <a href="index.html">Home</a> |
           <a href="bookNow.html">Book Now</a> |
           <a href="contact.html">Contact</a>
         </p>
@@ -127,31 +173,37 @@
     </div>
   </footer>
 
-</div>
-<div id="img1" class="lightbox">
-  <a href="#"><img src="img/womanfightingFish.jpg" alt="Woman reeling in fish with fishing pole"></a>
-</div>
+  <!-- LIGHTBOXES -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="lightboxClose">&times;</a>
+    <img src="img/womanfightingFish.jpg" alt="Woman reeling in fish with fishing pole">
+  </div>
 
-<div id="img2" class="lightbox">
-  <a href="#"><img src="img/offshoreTunaCatches.jpg" alt="Group of friends showing fish to camera"></a>
-</div>
+  <div id="img2" class="lightbox">
+    <a href="#" class="lightboxClose">&times;</a>
+    <img src="img/offshoreTunaCatches.jpg" alt="Group of friends showing fish to camera">
+  </div>
 
-<div id="img3" class="lightbox">
-  <a href="#"><img src="img/Capt.JimmySnook.jpg" alt="Captain Jimmy with slot Snook"></a>
-</div>
+  <div id="img3" class="lightbox">
+    <a href="#" class="lightboxClose">&times;</a>
+    <img src="img/Capt.JimmySnook.jpg" alt="Captain Jimmy with slot Snook">
+  </div>
 
-<div id="img4" class="lightbox">
-  <a href="#"><img src="img/inshore-tarpon.jpg" alt="Clients with Tarpon"></a>
-</div>
+  <div id="img4" class="lightbox">
+    <a href="#" class="lightboxClose">&times;</a>
+    <img src="img/inshore-tarpon.jpg" alt="Clients with Tarpon">
+  </div>
 
-<div id="img5" class="lightbox">
-  <a href="#"><img src="img/yellowFinTunaCatch.jpg" alt="Client with YellowFin Tuna"></a>
-</div>
+  <div id="img5" class="lightbox">
+    <a href="#" class="lightboxClose">&times;</a>
+    <img src="img/yellowFinTunaCatch.jpg" alt="Client with YellowFin Tuna">
+  </div>
 
-<div id="img6" class="lightbox">
-  <a href="#"><img src="img/yellowFinCatch2.jpg" alt="Woman client with yellow fin"></a>
-</div>
+  <div id="img6" class="lightbox">
+    <a href="#" class="lightboxClose">&times;</a>
+    <img src="img/yellowFinCatch2.jpg" alt="Woman client with yellow fin">
+  </div>
 
+</div>
 </body>
-
 </html>

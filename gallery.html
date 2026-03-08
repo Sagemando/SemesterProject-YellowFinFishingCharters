@@ -14,7 +14,9 @@
   <!-- HEADER -->
   <header class="siteHeader">
     <div class="logoTitle">
-      <a href="index.html"><img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="logo"></a>
+      <a href="index.html">
+        <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="logo">
+      </a>
       <h1>Yellow-Fin Fishing Charter</h1>
     </div>
 
@@ -23,45 +25,160 @@
       <button onclick="location.href='services.html'">Services</button>
       <button onclick="location.href='bookNow.html'">Book Now</button>
       <button class="active" onclick="location.href='gallery.html'">Gallery</button>
-      <button onclick="location.href='contact.html'">FAQ & Contact</button>
+      <button onclick="location.href='contact.html'">FAQ &amp; Contact</button>
       <button onclick="location.href='aboutUs.html'">About Us</button>
     </nav>
   </header>
 
   <!-- MAIN CONTENT -->
   <main>
+
+    <!-- FULL WIDTH PAGE TITLE -->
+    <h1 class="servicesTitle">Gallery</h1>
+
+    <!-- LEFT COLUMN - How To Videos -->
     <div class="leftColumn">
-      <section class="section1">
-        <h2 class="columnHeaders">Gallery Overview</h2>
-        <p>Showcase images of charters, catches, and happy clients.</p>
-      </section>
 
       <section class="section1">
-        <h2 class="columnHeaders">Instructional Videos</h2>
-        <p>A brief section to show instructional videos created by our team.</p>
-      </section>
-    </div>
+        <h2 class="columnHeaders">How To Videos</h2>
+        <p class="sectionDesc">
+          Check out our collection of instructional fishing videos for
+          beginner and experienced anglers alike. Learn tips and tricks
+          straight from our captains!
+        </p>
 
-    <div class="rightColumn">
-      <section class="section2">
-        <h2 class="columnHeaders">Featured Images</h2>
-        <div class="imageGrid">
-          <img src="img/img1.jpg" alt="Sample Image 1">
-          <img src="img/img2.jpg" alt="Sample Image 2">
-          <img src="img/img3.jpg" alt="Sample Image 3">
-          <img src="img/img4.jpg" alt="Sample Image 4">
-          <img src="img/img5.jpg" alt="Sample Image 5">
-          <img src="img/img6.jpg" alt="Sample Image 6">
+        <div class="videoGrid">
+
+          <!-- Video 1 -->
+          <div class="videoItem">
+            <p class="videoTitle">How To Rig a Fishing Line</p>
+            <div class="videoWrapper">
+              <iframe
+                src="https://www.youtube.com/embed/KQ0oVLZ44s0"
+                title="How To Rig a Fishing Line"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="videoItem">
+            <p class="videoTitle">How To Cast for Beginners</p>
+            <div class="videoWrapper">
+              <iframe
+                src="https://www.youtube.com/embed/yoauPIoxT5E"
+                title="How To Cast for Beginners"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="videoItem">
+            <p class="videoTitle">How To Catch Snook in Tampa Bay</p>
+            <div class="videoWrapper">
+              <iframe
+                src="https://www.youtube.com/embed/YcyjycZMpWM"
+                title="How To Catch Snook in Tampa Bay"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Video 4 -->
+          <div class="videoItem">
+            <p class="videoTitle">How To Fight and Land a Tuna</p>
+            <div class="videoWrapper">
+              <iframe
+                src="https://www.youtube.com/embed/1apURSwviGg"
+                title="How To Fight and Land a Tuna"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
         </div>
       </section>
+
     </div>
+
+    <!-- RIGHT COLUMN - Featured Images -->
+    <div class="rightColumn">
+
+      <section class="section2">
+        <h2 class="columnHeaders">Featured Images</h2>
+        <p class="sectionDesc">
+          A collection of our favorite catches, charters, and memories
+          out on the water with our guests and captains.
+        </p>
+
+        <div class="imageGrid">
+          <a href="#img1"><img src="img/MackerelOffshore.jpg" alt="Charter Image 1"></a>
+          <a href="#img2"><img src="img/TarponOffshore.jpg" alt="Charter Image 2"></a>
+          <a href="#img3"><img src="img/RedSnapperOffshore.jpg" alt="Charter Image 3"></a>
+          <a href="#img4"><img src="img/MarlinOffshore.jpg" alt="Charter Image 4"></a>
+          <a href="#img5"><img src="img/SnookInshore.jpg" alt="Charter Image 5"></a>
+          <a href="#img6"><img src="img/SeaTroutInshore.jpeg" alt="Charter Image 6"></a>
+          <a href="#img7"><img src="img/DoubleRedFishInshore.jpg" alt="Charter Image 7"></a>
+          <a href="#img8"><img src="img/SnookInshore2.jpg" alt="Charter Image 8"></a>
+          <a href="#img9"><img src="img/TarponInshore.png" alt="Charter Image 9"></a>
+        </div>
+
+        <!-- Lightboxes -->
+        <div id="img1" class="lightbox">
+          <a href="#" class="lightboxClose">&times;</a>
+          <img src="img/MackerelOffshore.jpg" alt="Clients holding Mackerel.">
+        </div>
+        <div id="img2" class="lightbox">
+          <a href="#" class="lightboxClose">&times;</a>
+          <img src="img/TarponOffshore.jpg" alt="Two clients double hooked on 2 Tarpon offshore.">
+        </div>
+        <div id="img3" class="lightbox">
+          <a href="#" class="lightboxClose">&times;</a>
+          <img src="img/RedSnapperOffshore.jpg" alt="Woman holding Red Snapper.">
+        </div>
+        <div id="img4" class="lightbox">
+          <a href="#" class="lightboxClose">&times;</a>
+          <img src="img/MarlinOffshore.jpg" alt="Two men holding Marlin offshore.">
+        </div>
+        <div id="img5" class="lightbox">
+          <a href="#" class="lightboxClose">&times;</a>
+          <img src="img/SnookInshore.jpg" alt="Man holding Snook.">
+        </div>
+        <div id="img6" class="lightbox">
+          <a href="#" class="lightboxClose">&times;</a>
+          <img src="img/SeaTroutInshore.jpeg" alt="Boy holding spotted sea trout.">
+        </div>
+        <div id="img7" class="lightbox">
+          <a href="#" class="lightboxClose">&times;</a>
+          <img src="img/DoubleRedFishInshore.jpg" alt="Tow men holding up Red Fish.">
+        </div>
+        <div id="img8" class="lightbox">
+          <a href="#" class="lightboxClose">&times;</a>
+          <img src="img/SnookInshore2.jpg" alt="man holding snook inshore.">
+        </div>
+        <div id="img9" class="lightbox">
+          <a href="#" class="lightboxClose">&times;</a>
+          <img src="img/TarponInshore.png" alt="Two men holding Tarpon offshore.">
+        </div>
+
+      </section>
+
+    </div>
+
   </main>
 
   <!-- FOOTER -->
   <footer class="siteFooter">
     <div class="footerContent">
       <div class="footerLogo">
-        <a href="index.html"><img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="footerLogoImg"></a>
+        <a href="index.html">
+          <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="footerLogoImg">
+        </a>
       </div>
       <div class="footerInfo">
         <p>&copy; 2026 Yellow-Fin Fishing Charter. All rights reserved.</p>

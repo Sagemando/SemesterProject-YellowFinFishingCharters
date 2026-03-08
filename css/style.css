@@ -441,6 +441,226 @@ main{
   }
 }
 
+/* ── FAQ & Contact Page ── */
+.faqList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faqList li {
+  border-bottom: 0.1em solid #0E4D64;
+  padding: 0.8em 0;
+}
+
+.faqList li:last-child {
+  border-bottom: none;
+}
+
+.faqQuestion {
+  font-weight: bold;
+  color: #0E4D64;
+  font-size: 15px;
+  margin: 0 0 0.3em 0;
+}
+
+.faqAnswer {
+  font-size: 14px;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Contact form inside right column */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-top: 0.5em;
+}
+
+.contactFormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.contactFormGroup label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0E4D64;
+}
+
+.contactFormGroup input[type="text"],
+.contactFormGroup input[type="email"],
+.contactFormGroup textarea {
+  padding: 0.5em 0.8em;
+  font-size: 14px;
+  font-family: Verdana, sans-serif;
+  border: 0.1em solid #0E4D64;
+  border-radius: 4px;
+  background-color: white;
+  color: #1a1a1a;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.contactFormGroup input:focus,
+.contactFormGroup textarea:focus {
+  outline: 2px solid #F2C94C;
+  border-color: #F2C94C;
+}
+
+.contactFormGroup textarea {
+  resize: vertical;
+}
+
+.contactFormRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8em;
+}
+
+.contactSubmitRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ── About Us Page ── */
+
+/* Captain card layout */
+.captainCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-bottom: 1em;
+}
+
+/* Captain image wrapper — floats image left, text wraps right and below */
+.captainImageWrap {
+  float: left;
+  margin: 0 1em 0.5em 0;
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.captainImg {
+  width: 140px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 0.15em solid #0E4D64;
+  display: block;
+}
+
+/* Captain text info flows beside and below image */
+.captainInfo {
+  overflow: hidden;
+}
+
+/* Captain name */
+.captainName {
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 20px;
+  color: #0E4D64;
+  margin: 0 0 0.1em 0;
+}
+
+/* Captain role subtitle */
+.captainRole {
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1F7A8C;
+  margin: 0 0 0.5em 0;
+  font-style: italic;
+}
+
+/* Clearfix after each captain card */
+.captainCard::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Divider between captains */
+.captainDivider {
+  border: none;
+  border-top: 0.1em solid #0E4D64;
+  margin: 1.2em 0;
+}
+
+/* ── Gallery Page ── */
+
+/* 2x2 video grid */
+.videoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-top: 0.8em;
+}
+
+/* Individual video item */
+.videoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+/* Video title label */
+.videoTitle {
+  font-size: 13px;
+  font-weight: bold;
+  color: #0E4D64;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive iframe wrapper — maintains 16:9 ratio */
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 0.1em solid #0E4D64;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Lightbox close button */
+.lightboxClose {
+  position: absolute;
+  top: 1em;
+  right: 1.5em;
+  font-size: 2.5em;
+  color: white;
+  text-decoration: none;
+  line-height: 1;
+  z-index: 1001;
+  transition: color 0.2s;
+}
+
+.lightboxClose:hover {
+  color: #F2C94C;
+}
+
+/* Gallery mobile responsive */
+@media (max-width: 768px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* ── Thank You Page ── */
 .thankYouCard {
   background-color: #B8C2CC;
@@ -588,6 +808,13 @@ iframe{
 /* Footer info */
 .footerInfo p {
   margin: 0.2em 0;
+}
+
+/* Price tag styling */
+.priceTag {
+  color: #1F7A8C;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 

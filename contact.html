@@ -14,7 +14,9 @@
   <!-- HEADER -->
   <header class="siteHeader">
     <div class="logoTitle">
-      <a href="index.html"><img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="logo"></a>
+      <a href="index.html">
+        <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="logo">
+      </a>
       <h1>Yellow-Fin Fishing Charter</h1>
     </div>
 
@@ -23,35 +25,138 @@
       <button onclick="location.href='services.html'">Services</button>
       <button onclick="location.href='bookNow.html'">Book Now</button>
       <button onclick="location.href='gallery.html'">Gallery</button>
-      <button class="active" onclick="location.href='contact.html'">FAQ & Contact</button>
+      <button class="active" onclick="location.href='contact.html'">FAQ &amp; Contact</button>
       <button onclick="location.href='aboutUs.html'">About Us</button>
     </nav>
   </header>
 
   <!-- MAIN CONTENT -->
   <main>
+
+    <!-- FULL WIDTH PAGE TITLE -->
+    <h1 class="servicesTitle">FAQ &amp; Contact Info</h1>
+
+    <!-- LEFT COLUMN -->
     <div class="leftColumn">
+
       <section class="section1">
-        <h2 class="columnHeaders">Frequently Asked Questions</h2>
-        <p>Placeholder for common questions and answers about charters, bookings, and equipment.</p>
+        <h2 class="columnHeaders">FAQ</h2>
+        <ul class="faqList">
+
+          <li>
+            <p class="faqQuestion">What should I bring?</p>
+            <p class="faqAnswer">
+              We recommend bringing sunscreen, sunglasses, a hat, snacks,
+              and plenty of water. Comfortable, non-slip footwear is also
+              strongly advised.
+            </p>
+          </li>
+
+          <li>
+            <p class="faqQuestion">When should I arrive?</p>
+            <p class="faqAnswer">
+              Please arrive at least 15 minutes before your scheduled
+              departure time to allow for boarding and a safety briefing.
+            </p>
+          </li>
+
+          <li>
+            <p class="faqQuestion">What should I wear?</p>
+            <p class="faqAnswer">
+              Light, breathable clothing is best. We recommend layers as
+              mornings on the water can be cool. Avoid open-toed shoes
+              on the boat.
+            </p>
+          </li>
+
+          <li>
+            <p class="faqQuestion">What can I expect?</p>
+            <p class="faqAnswer">
+              Expect a fun, guided fishing experience led by our experienced
+              captains. We will provide all necessary equipment unless you
+              have opted out of gear rental.
+            </p>
+          </li>
+
+          <li>
+            <p class="faqQuestion">Do I need a fishing license?</p>
+            <p class="faqAnswer">
+              No — your fishing license is covered under our charter license
+              for the duration of your trip.
+            </p>
+          </li>
+
+          <li>
+            <p class="faqQuestion">What is your cancellation policy?</p>
+            <p class="faqAnswer">
+              Cancellations made 48 hours or more in advance are fully
+              refunded. Cancellations within 48 hours may be subject to
+              a partial fee. Please contact us directly for more details.
+            </p>
+          </li>
+
+        </ul>
       </section>
+
     </div>
 
+    <!-- RIGHT COLUMN -->
     <div class="rightColumn">
+
       <section class="section2">
-        <h2 class="columnHeaders">Contact Information</h2>
-        <p>Email: info@yellowfinfishing.com</p>
-        <p>Phone: (555) 123-4567</p>
-        <p>Address: 123 Marina Blvd, St. Petersburg, FL</p>
+        <h2 class="columnHeaders">How to Contact Us</h2>
+        <p class="sectionDesc">
+          Fill out the form below and we will get back to you as soon as
+          possible. Email is the best way to reach us.
+        </p>
+
+        <form class="contactForm">
+
+          <div class="contactFormRow">
+            <div class="contactFormGroup">
+              <label for="contactFirstName">First Name</label>
+              <input type="text" id="contactFirstName" name="contactFirstName"
+                     placeholder="First name" required>
+            </div>
+            <div class="contactFormGroup">
+              <label for="contactLastName">Last Name</label>
+              <input type="text" id="contactLastName" name="contactLastName"
+                     placeholder="Last name" required>
+            </div>
+          </div>
+
+          <div class="contactFormGroup">
+            <label for="contactEmail">Email Address</label>
+            <input type="email" id="contactEmail" name="contactEmail"
+                   placeholder="example@email.com" required>
+          </div>
+
+          <div class="contactFormGroup">
+            <label for="contactMessage">Question or Comment</label>
+            <textarea id="contactMessage" name="contactMessage" rows="5"
+                      placeholder="Enter your question or comment here..." required>
+            </textarea>
+          </div>
+
+          <div class="contactSubmitRow">
+            <button type="submit" class="bookSubmitBtn">Send Message</button>
+          </div>
+
+        </form>
+
       </section>
+
     </div>
+
   </main>
 
   <!-- FOOTER -->
   <footer class="siteFooter">
     <div class="footerContent">
       <div class="footerLogo">
-        <a href="index.html"><img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="footerLogoImg"></a>
+        <a href="index.html">
+          <img src="img/yellowFinFishingLogo2.jpg" alt="Yellow-Fin Logo" class="footerLogoImg">
+        </a>
       </div>
       <div class="footerInfo">
         <p>&copy; 2026 Yellow-Fin Fishing Charter. All rights reserved.</p>
