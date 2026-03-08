@@ -1,4 +1,5 @@
-html,body{
+/* ── BASE ── */
+html, body {
   height: 100%;
   font-family: Verdana, sans-serif;
   margin: 0;
@@ -15,8 +16,8 @@ html,body{
   flex-direction: column;
 }
 
-/* Two Column Layout */
-main{
+/* ── MAIN LAYOUT ── */
+main {
   flex: 1 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -25,7 +26,7 @@ main{
   align-items: start;
 }
 
-/* Site header */
+/* ── SITE HEADER ── */
 .siteHeader {
   display: flex;
   justify-content: space-between;
@@ -49,14 +50,13 @@ main{
   width: auto;
 }
 
-/* Site title styling */
 .siteHeader h1 {
   font-size: 28px;
   margin: 0;
   white-space: nowrap;
 }
 
-/* Nav tabs styling */
+/* ── NAV TABS ── */
 .navTabs {
   display: flex;
   gap: 0;
@@ -88,40 +88,42 @@ main{
   color: #0E4D64;
 }
 
-/* ── Services Page ── */
-.servicesTitle {
-  grid-column: 1 / -1;
+/* ── COLUMN LAYOUT ── */
+.leftColumn,
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
+  align-items: center;
+}
+
+/* ── SECTIONS ── */
+.section1,
+.section2 {
+  width: 80%;
+  border: 0.1em solid black;
+  background-color: #B8C2CC;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+/* ── COLUMN HEADERS ── */
+.columnHeaders {
   text-align: center;
   font-family: Trebuchet MS, sans-serif;
   font-size: 36px;
-  margin: 0 auto 0.5em auto;
-  color: #0E4D64;
-  background-color: #B8C2CC;
-  border: 0.1em solid black;
-  padding: 0.5em 2em;
-  box-sizing: border-box;
-  width: fit-content;
+  margin: 0 0 0.4em 0;
 }
 
-.servicesTitle span {
-  display: block;
-  font-size: 16px;
-  font-style: italic;
-  color: #333;
-  margin-top: 0.2em;
+/* ── SECTION DESCRIPTION TEXT ── */
+.sectionDesc {
+  font-size: 14px;
+  margin: 0.4em 0 0 0;
+  color: #1a1a1a;
+  line-height: 1.5;
 }
 
-.section1 ul,
-.section2 ul {
-  padding-left: 1.5em;
-  margin: 0.5em 0;
-}
-
-.section1 ul li,
-.section2 ul li {
-  margin-bottom: 0.4em;
-}
-
+/* ── BOOK LINK BUTTON ── */
 .bookLink {
   display: inline-block;
   margin-top: 0.8em;
@@ -142,7 +144,212 @@ main{
   border-color: #1F7A8C;
 }
 
-/* ── Book Now Page ── */
+/* ── SUBMIT BUTTON ── */
+.bookSubmitBtn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1.5em;
+  background-color: #0E4D64;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.bookSubmitBtn:hover {
+  background-color: #F2C94C;
+  color: #0E4D64;
+}
+
+/* ── IMAGE GRID ── */
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: auto;
+}
+
+.imageGrid img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  width: 50vw;
+  height: auto;
+  border-radius: 8px;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 1em;
+  right: 1.5em;
+  font-size: 2.5em;
+  color: white;
+  text-decoration: none;
+  line-height: 1;
+  z-index: 1001;
+  transition: color 0.2s;
+}
+
+.lightboxClose:hover {
+  color: #F2C94C;
+}
+
+/* ── HOW TO VIDEO (legacy single video) ── */
+.howToVideo {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.howToVideo iframe {
+  max-width: 100%;
+}
+
+/* ── VIDEO GRID ── */
+.videoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-top: 0.8em;
+}
+
+.videoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.videoTitle {
+  font-size: 13px;
+  font-weight: bold;
+  color: #0E4D64;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive 16:9 iframe wrapper */
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 0.1em solid #0E4D64;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Legacy bare iframe */
+iframe {
+  width: auto;
+  height: auto;
+}
+
+/* ── SITE FOOTER ── */
+.siteFooter {
+  background-color: #102A43;
+  color: white;
+  padding: 1.5em 2em;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.siteFooter a {
+  color: #F2C94C;
+  text-decoration: none;
+}
+
+.siteFooter a:hover {
+  text-decoration: underline;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footerLogoImg {
+  height: 100px;
+  width: auto;
+}
+
+.footerInfo p {
+  margin: 0.2em 0;
+}
+
+/* ── SERVICES PAGE ── */
+.servicesTitle {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 36px;
+  margin: 0 auto 0.5em auto;
+  color: #0E4D64;
+  background-color: #B8C2CC;
+  border: 0.1em solid black;
+  padding: 0.5em 2em;
+  box-sizing: border-box;
+  width: fit-content;
+}
+
+.section1 ul,
+.section2 ul {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+.section1 ul li,
+.section2 ul li {
+  margin-bottom: 0.4em;
+}
+
+/* Price tag */
+.priceTag {
+  color: #1F7A8C;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* ── BOOK NOW PAGE ── */
 .bookNowTitle {
   grid-column: 1 / -1;
   text-align: center;
@@ -182,16 +389,10 @@ main{
 
 .bookingTable td {
   border: 0.1em solid #0E4D64;
-  padding: 0.4em;
+  padding: 0;
   text-align: center;
   cursor: pointer;
   transition: background 0.2s;
-}
-
-.bookingTable td:hover {
-  background-color: #F2C94C;
-  color: #0E4D64;
-  font-weight: bold;
 }
 
 .bookingTable td.booked {
@@ -201,53 +402,35 @@ main{
   text-decoration: line-through;
 }
 
-/* Checkbox list for gear/kayak */
-.checkList {
-  list-style: none;
-  padding: 0;
-  margin: 0.5em 0;
+/* Hide the actual checkbox */
+.dayCheck {
+  display: none;
 }
 
-.checkList li {
-  margin-bottom: 0.5em;
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  font-size: 14px;
-}
-
-.checkList input[type="checkbox"] {
-  accent-color: #0E4D64;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-
-/* Submit booking button */
-.bookSubmitBtn {
-  display: inline-block;
-  margin-top: 1em;
-  padding: 0.5em 1.5em;
-  background-color: #0E4D64;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
+/* Style the label to look like a table cell */
+.dayLabel {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.4em;
+  text-align: center;
   cursor: pointer;
   transition: background 0.2s;
 }
 
-.bookSubmitBtn:hover {
+/* When checkbox is checked highlight the label */
+.dayCheck:checked + .dayLabel {
   background-color: #F2C94C;
   color: #0E4D64;
+  font-weight: bold;
 }
 
-/* Section description text */
-.sectionDesc {
-  font-size: 14px;
-  margin: 0.4em 0 0 0;
-  color: #1a1a1a;
+/* Booked cells no interaction */
+.bookingTable td.booked .dayLabel {
+  cursor: not-allowed;
+  color: #888;
+  text-decoration: line-through;
+  background-color: #ccc;
 }
 
 /* Month selector dropdown */
@@ -275,9 +458,29 @@ main{
   color: #0E4D64;
 }
 
-/* ── Booking Form Page ── */
+/* Checkbox list for gear/kayak */
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0;
+}
 
-/* Override main grid to single column for form page */
+.checkList li {
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 14px;
+}
+
+.checkList input[type="checkbox"] {
+  accent-color: #0E4D64;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* ── BOOKING FORM PAGE ── */
 .formMain {
   display: flex;
   justify-content: center;
@@ -285,7 +488,6 @@ main{
   padding: 2em;
 }
 
-/* Form container */
 .formContainer {
   width: 100%;
   max-width: 800px;
@@ -295,7 +497,6 @@ main{
   gap: 1em;
 }
 
-/* The form itself */
 .bookingForm {
   width: 100%;
   display: flex;
@@ -303,7 +504,6 @@ main{
   gap: 1.5em;
 }
 
-/* Fieldset groupings */
 .formFieldset {
   border: 0.1em solid #0E4D64;
   border-radius: 6px;
@@ -313,7 +513,6 @@ main{
   width: 100%;
 }
 
-/* Fieldset legend */
 .formLegend {
   font-family: Trebuchet MS, sans-serif;
   font-size: 20px;
@@ -322,7 +521,6 @@ main{
   padding: 0 0.5em;
 }
 
-/* Row of form groups */
 .formRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -334,26 +532,22 @@ main{
   margin-bottom: 0;
 }
 
-/* Individual form group */
 .formGroup {
   display: flex;
   flex-direction: column;
   gap: 0.3em;
 }
 
-/* Full width group inside a row */
 .formGroup.fullWidth {
   grid-column: 1 / -1;
 }
 
-/* Labels */
 .formGroup label {
   font-size: 14px;
   font-weight: bold;
   color: #0E4D64;
 }
 
-/* Text inputs, selects, textareas */
 .formGroup input[type="text"],
 .formGroup input[type="tel"],
 .formGroup input[type="email"],
@@ -379,12 +573,10 @@ main{
   border-color: #F2C94C;
 }
 
-/* Textarea resize */
 .formGroup textarea {
   resize: vertical;
 }
 
-/* Checkbox rows inside form */
 .checkListForm {
   display: flex;
   align-items: flex-start;
@@ -408,40 +600,58 @@ main{
   line-height: 1.4;
 }
 
-/* Required asterisk */
 .required {
   color: #c0392b;
   font-weight: bold;
 }
 
-/* Required field note */
 .requiredNote {
   font-size: 13px;
   color: #333;
   margin: 0;
 }
 
-/* Submit button row */
 .formSubmitRow {
   display: flex;
   justify-content: center;
   margin-bottom: 1em;
 }
 
-/* Wider submit button for form */
 .formSubmitBtn {
   padding: 0.7em 3em;
   font-size: 16px;
 }
 
-/* Form mobile responsive */
-@media (max-width: 600px) {
-  .formRow {
-    grid-template-columns: 1fr;
-  }
+/* ── THANK YOU PAGE ── */
+.thankYouCard {
+  background-color: #B8C2CC;
+  border: 0.1em solid black;
+  border-radius: 6px;
+  padding: 2.5em 3em;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
 }
 
-/* ── FAQ & Contact Page ── */
+.thankYouHeading {
+  font-family: Trebuchet MS, sans-serif;
+  font-size: 36px;
+  color: #0E4D64;
+  margin: 0;
+}
+
+.thankYouText {
+  font-size: 15px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── FAQ & CONTACT PAGE ── */
 .faqList {
   list-style: none;
   padding: 0;
@@ -471,7 +681,6 @@ main{
   line-height: 1.5;
 }
 
-/* Contact form inside right column */
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -526,9 +735,7 @@ main{
   justify-content: flex-end;
 }
 
-/* ── About Us Page ── */
-
-/* Captain card layout */
+/* ── ABOUT US PAGE ── */
 .captainCard {
   display: flex;
   flex-direction: column;
@@ -536,7 +743,6 @@ main{
   margin-bottom: 1em;
 }
 
-/* Captain image wrapper — floats image left, text wraps right and below */
 .captainImageWrap {
   float: left;
   margin: 0 1em 0.5em 0;
@@ -553,12 +759,10 @@ main{
   display: block;
 }
 
-/* Captain text info flows beside and below image */
 .captainInfo {
   overflow: hidden;
 }
 
-/* Captain name */
 .captainName {
   font-family: Trebuchet MS, sans-serif;
   font-size: 20px;
@@ -566,7 +770,6 @@ main{
   margin: 0 0 0.1em 0;
 }
 
-/* Captain role subtitle */
 .captainRole {
   font-family: Verdana, sans-serif;
   font-size: 14px;
@@ -576,257 +779,60 @@ main{
   font-style: italic;
 }
 
-/* Clearfix after each captain card */
 .captainCard::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Divider between captains */
 .captainDivider {
   border: none;
   border-top: 0.1em solid #0E4D64;
   margin: 1.2em 0;
 }
 
-/* ── Gallery Page ── */
-
-/* 2x2 video grid */
-.videoGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  margin-top: 0.8em;
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Individual video item */
-.videoItem {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3em;
-}
-
-/* Video title label */
-.videoTitle {
-  font-size: 13px;
-  font-weight: bold;
-  color: #0E4D64;
-  margin: 0;
-  text-align: center;
-}
-
-/* Responsive iframe wrapper — maintains 16:9 ratio */
-.videoWrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 6px;
-  border: 0.1em solid #0E4D64;
-}
-
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Lightbox close button */
-.lightboxClose {
-  position: absolute;
-  top: 1em;
-  right: 1.5em;
-  font-size: 2.5em;
-  color: white;
-  text-decoration: none;
-  line-height: 1;
-  z-index: 1001;
-  transition: color 0.2s;
-}
-
-.lightboxClose:hover {
-  color: #F2C94C;
-}
-
-/* Gallery mobile responsive */
 @media (max-width: 768px) {
+  .imageGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .videoGrid {
     grid-template-columns: 1fr;
   }
-}
 
+  .sectionInner {
+    grid-template-columns: 1fr;
+  }
 
-/* ── Thank You Page ── */
-.thankYouCard {
-  background-color: #B8C2CC;
-  border: 0.1em solid black;
-  border-radius: 6px;
-  padding: 2.5em 3em;
-  text-align: center;
-  max-width: 600px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-}
-
-.thankYouHeading {
-  font-family: Trebuchet MS, sans-serif;
-  font-size: 36px;
-  color: #0E4D64;
-  margin: 0;
-}
-
-.thankYouText {
-  font-size: 15px;
-  color: #1a1a1a;
-  line-height: 1.6;
-  margin: 0;
-}
-
-
-/* COLUMN STACKING */
-.leftColumn,
-.rightColumn{
-  display: flex;
-  flex-direction: column;
-  gap: 10em;
-  align-items: center;
-}
-
-/* Sections styling */
-.section1,
-.section2{
-  width: 80%;
-  border: .1em solid black;
-  background-color: #B8C2CC;
-  padding: 1em;
-  box-sizing: border-box;
-}
-
-/* Video centering */
-.howToVideo{
-  display: flex;
-  justify-content: center;
-  width: 80%;
-}
-
-.howToVideo iframe{
-  max-width: 100%;
-}
-
-/* Header style */
-.columnHeaders{
-  text-align: center;
-  font-family: Trebuchet MS, sans-serif;
-  font-size: 36px;
-  margin: 0 0 0.4em 0;
-}
-
-.imageGrid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: auto;
-}
-
-.imageGrid img{
-  width: 100%;
-  aspect-ratio: 3 / 2 ;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.lightbox{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.lightbox img{
-  width: 50vw;
-  height: auto;
-  border-radius: 8px;
-}
-
-.lightbox:target{
-  display: flex;
-}
-
-iframe{
-  width: auto;
-  height: auto;
-}
-/* SITE FOOTER */
-.siteFooter {
-  background-color: #102A43;
-  color: white;
-  padding: 1.5em 2em;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
-.siteFooter a {
-  color: #F2C94C; /* Fin Yellow for links */
-  text-decoration: none;
-}
-
-.siteFooter a:hover {
-  text-decoration: underline;
-}
-
-/* Layout of footer content */
-.footerContent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-/* Logo styling */
-.footerLogoImg {
-  height: 100px;
-  width: auto;
-}
-
-/* Footer info */
-.footerInfo p {
-  margin: 0.2em 0;
-}
-
-/* Price tag styling */
-.priceTag {
-  color: #1F7A8C;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-
-/* Mobile friendly */
-@media (max-width: 900px){
-  main{
+  .contactFormRow {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 768px){
-  .imageGrid{
-    grid-template-columns: 1fr 1fr;
+@media (max-width: 600px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .thankYouCard {
+    padding: 1.5em;
+  }
+
+  .captainImageWrap {
+    float: none;
+    width: 100%;
+    margin: 0 0 0.8em 0;
+  }
+
+  .captainImg {
+    width: 100%;
+    height: auto;
   }
 }
